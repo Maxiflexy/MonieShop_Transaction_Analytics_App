@@ -51,36 +51,4 @@ public class TransactionFileReader {
         }
         return products;
     }
-
-//    public static List<TransactionRecord> readTransactionsFromFile(Path filePath) throws IOException {
-//        List<TransactionRecord> records = new ArrayList<>();
-//        List<String> lines = Files.readAllLines(filePath);
-//        System.out.println(lines.get(0));
-//
-//        for (String line : lines) {
-//            String[] parts = line.split(",");
-//            int staffId = Integer.parseInt(parts[0]);
-//            String transactionTimeStr = parts[1].trim();
-//
-//            if (transactionTimeStr.length() == 16) {
-//                transactionTimeStr += ":00";
-//            }
-//
-//            LocalDateTime transactionTime = LocalDateTime.parse(transactionTimeStr, DATE_TIME_FORMAT);
-//
-//            Map<Integer, Integer> products = new HashMap<>();
-//            String productDetails = parts[2].replace("[", "").replace("]", "");
-//            for (String item : productDetails.split("\\|")) {
-//                String[] itemParts = item.split(":");
-//                int productId = Integer.parseInt(itemParts[0]);
-//                int quantity = Integer.parseInt(itemParts[1]);
-//                products.put(productId, quantity);
-//            }
-//
-//            double saleAmount = Double.parseDouble(parts[3]);
-//            records.add(new TransactionRecord(staffId, transactionTime, products, saleAmount));
-//        }
-//        return records;
-//    }
-
 }

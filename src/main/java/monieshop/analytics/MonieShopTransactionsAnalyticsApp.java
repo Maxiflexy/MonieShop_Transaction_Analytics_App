@@ -43,66 +43,6 @@ public class MonieShopTransactionsAnalyticsApp {
         }
     }
 
-//    public static void main(String[] args) {
-//
-//        System.out.println("=============================================================");
-//        System.out.println("          WELCOME TO MONIESHOP TRANSACTIONS ANALYTICS APP    ");
-//        System.out.println("=============================================================\n");
-//
-//
-//        while (true){
-//            try {
-//                List<String> folders = Files.list(resourcePath)
-//                        .filter(Files::isDirectory)
-//                        .map(path -> path.getFileName().toString())
-//                        .toList();
-//
-//                System.out.println("Available Test Cases:");
-//                for (int i = 0; i < folders.size(); i++) {
-//                    System.out.println((i + 1) + ". " + folders.get(i));
-//                }
-//
-//                System.out.print("\nEnter test case number: ");
-//                int choice = scanner.nextInt();
-//                scanner.nextLine();
-//
-//                if (choice < 1 || choice > folders.size()) {
-//                    System.out.println("\nInvalid choice, Please try again.\n");
-//                    continue;
-//                }
-//
-//                String selectedFolder = folders.get(choice - 1);
-//                System.out.println("\n-------------------------------------------------------------");
-//                System.out.println("                 PROCESSING: " + selectedFolder);
-//                System.out.println("-------------------------------------------------------------\n");
-//
-//                //System.out.println("Processing: " + selectedFolder);
-//                TransactionProcessor processor =
-//                        new TransactionProcessor(resourcePath.resolve(selectedFolder).toString(), executor);
-//
-//                processor.analyzeTransactions();
-//
-//                System.out.print("\n-------------------------------------------------------------\n");
-//                System.out.print("Do you wish to continue using the application? (Y/N): ");
-//                String response = scanner.nextLine().trim().toUpperCase();
-//
-//                if (response.equals("N")) {
-//                    System.out.println("\nExiting application...\n");
-//                    executor.shutdown();
-//                    break;
-//                } else if (!response.equals("Y")) {
-//                    System.out.println("\nInvalid input. Assuming 'No' and exiting.");
-//                    executor.shutdown();
-//                    break;
-//                }
-//
-//            } catch (Exception e) {
-//                System.out.println("An error occurred: " + e.getMessage());
-//            }
-//        }
-//        scanner.close();
-//    }
-
     private static void printWelcomeMessage() {
         System.out.println("=============================================================");
         System.out.println("          WELCOME TO MONIESHOP TRANSACTIONS ANALYTICS APP    ");

@@ -33,13 +33,12 @@ public class TransactionProcessor {
             futures.add(executor.submit(() -> TransactionFileReader.readTransactionsFromFile(file)));
         }
 
-        // Collect results
         List<TransactionRecord> allTransactions = new ArrayList<>();
         for (Future<List<TransactionRecord>> future : futures) {
             try {
                 allTransactions.addAll(future.get());
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
         computeMetrics(allTransactions);
